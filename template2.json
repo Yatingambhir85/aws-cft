@@ -1,0 +1,23 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+
+    "Description": "This CFT template will create a EC2 Instance",
+
+    "Resources":{
+        "EC2Instance":{
+            "Type": "AWS::EC2::Instance",
+            "Properties":{
+                "ImageId" : "ami-0c7217cdde317cfec",
+                "InstanceType" : "t2.micro",
+                "KeyName" : "aws-login",
+                "SecurityGroupIds" : [ "sg-0fb4bd4ae4dc4647a" ],
+                "NetworkInterfaces": [ {
+                    "AssociatePublicIpAddress": true ,
+                    "DeviceIndex": "0",
+                    "SubnetId": ["subnet-049d89c0c62949ff8"],
+                    "SecurityGroupIds" : [ "sg-0fb4bd4ae4dc4647a" ] } ]
+            }           
+        }
+    }    
+   
+}
