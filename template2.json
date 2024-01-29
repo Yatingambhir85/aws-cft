@@ -10,12 +10,11 @@
                 "ImageId" : "ami-0c7217cdde317cfec",
                 "InstanceType" : "t2.micro",
                 "KeyName" : "aws-login",
-                "SecurityGroupIds" : [ "sg-0fb4bd4ae4dc4647a" ],
                 "NetworkInterfaces": [ {
                     "AssociatePublicIpAddress": true ,
                     "DeviceIndex": "0",
-                    "SubnetId": ["subnet-049d89c0c62949ff8"],
-                    "SecurityGroupIds" : [ "sg-0fb4bd4ae4dc4647a" ] } ]
+                    "SubnetId": "subnet-049d89c0c62949ff8",
+                    "GroupSet": ["sg-0fb4bd4ae4dc4647a"] } ]
             }           
         }
     }    
